@@ -75,7 +75,7 @@ func regCommonServerFlags(cmd *kingpin.CmdClause) (
 		Default(cluster.LanNetworkPeerType).
 		Enum(cluster.NetworkPeerTypes...)
 
-	gossipDisabled := cmd.Flag("cluster.disable", "Deprecated(gossip will be removed from v0.5.0): If true gossip will be disabled and no cluster related server will be started.").Default("true").Bool()
+	gossipDisabled := cmd.Flag("cluster.disable", "Deprecated(gossip will be removed from v0.5.0): If true gossip will be disabled and no cluster related server will be started.").Default("false").Bool()
 
 	return grpcBindAddr,
 		httpBindAddr,
